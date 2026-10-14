@@ -1,10 +1,42 @@
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.primary-nav');
+const cinematic = document.querySelector('[data-cinematic]');
 
 const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
+
+if (cinematic && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const sticky = cinematic.querySelector('.cinematic-sticky');
+  const steps = [...cinematic.querySelectorAll('[data-journey-step]')];
+  const indices = [...cinematic.querySelectorAll('.journey-index span')];
+  let ticking = false;
+
+  const updateJourney = () => {
+    const rect = cinematic.getBoundingClientRect();
+    const travel = Math.max(1, cinematic.offsetHeight - window.innerHeight);
+    const progress = Math.max(0, Math.min(1, -rect.top / travel));
+    const active = Math.min(steps.length - 1, Math.floor(progress * steps.length));
+    sticky.style.setProperty('--journey-x', `${(progress * -7).toFixed(3)}%`);
+    sticky.style.setProperty('--journey-scale', (1.04 + progress * .18).toFixed(4));
+    sticky.style.setProperty('--journey-height', `${(progress * 100).toFixed(2)}%`);
+    steps.forEach((step, index) => step.classList.toggle('is-active', index === active));
+    indices.forEach((index, item) => index.classList.toggle('is-active', item === active));
+    ticking = false;
+  };
+
+  const requestJourneyUpdate = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateJourney);
+      ticking = true;
+    }
+  };
+
+  updateJourney();
+  window.addEventListener('scroll', requestJourneyUpdate, { passive: true });
+  window.addEventListener('resize', requestJourneyUpdate);
+}
 
 menuButton?.addEventListener('click', () => {
   const open = !nav.classList.contains('is-open');

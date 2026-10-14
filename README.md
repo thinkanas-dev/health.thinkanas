@@ -6,10 +6,9 @@ Static executive landing page for `health.thinkanas.com`.
 
 Serve the `dist` directory with any static HTTP server.
 
-The hero automatically uses `dist/anas-portrait-hero.png` when that file is added. Until then, a neutral, non-identifying executive silhouette is shown.
+The hero and cinematic journey use `dist/anas-dubai-vision.png`, supplied by the site owner.
 
 ## Before public launch
 
-- Add the final cut-out portrait as `dist/anas-portrait-hero.png`.
 - Connect the engagement form to the preferred email, CRM, or scheduling destination.
 - Validate regulatory and certification wording with legal and governance stakeholders.
