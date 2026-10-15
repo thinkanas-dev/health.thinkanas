@@ -104,17 +104,7 @@ html[dir="rtl"] .scroll-meter span { transform-origin: right; }
 .hero-ticker i { width: 6px; height: 6px; background: var(--blue); transform: rotate(45deg); }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
-.proof-ribbon { padding: 30px var(--pad) 0; color: var(--ink); background: var(--white); }
-.proof-ribbon > p { margin: 0; padding-bottom: 14px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
-.proof-ribbon > p a { border-bottom: 1px solid currentColor; }
-.proof-ribbon > div { display: grid; grid-template-columns: repeat(4, 1fr); }
-.proof-ribbon article { min-height: 130px; padding: 22px 18px; display: grid; align-content: end; gap: 7px; border-right: 1px solid var(--line-dark); }
-.proof-ribbon article:first-child { padding-left: 0; }
-.proof-ribbon article:last-child { border-right: 0; }
-.proof-ribbon strong { font-family: Georgia, serif; font-size: clamp(28px, 3.2vw, 48px); font-weight: 400; font-style: italic; }
-.proof-ribbon article span { color: #5f6670; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
-
-.blueprint, .services, .proof { padding: clamp(90px, 11vw, 170px) var(--pad); }
+.blueprint, .services { padding: clamp(90px, 11vw, 170px) var(--pad); }
 .blueprint { background: var(--paper); }
 .section-heading { margin-bottom: clamp(48px, 7vw, 90px); display: grid; grid-template-columns: .58fr 1.55fr .72fr; gap: clamp(26px, 5vw, 78px); align-items: start; }
 .section-code { color: var(--blue); }
@@ -248,17 +238,6 @@ html[dir="rtl"] .scroll-meter span { transform-origin: right; }
 .claim-note b { color: var(--acid); font-size: 7px; letter-spacing: .13em; }
 .claim-note span { color: #c4ccff; font-size: 10px; line-height: 1.5; }
 
-.proof { color: var(--ink); background: var(--paper); }
-.evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
-.evidence-card { position: relative; min-height: 470px; padding: clamp(24px, 3.2vw, 44px); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.evidence-card > p { font-size: 8px; font-weight: 900; letter-spacing: .13em; }
-.evidence-card h3 { font-family: Georgia, serif; font-weight: 400; font-style: italic; line-height: 1.04; }
-.evidence-card > span { color: var(--blue); font-family: Georgia, serif; font-size: 32px; font-style: italic; }
-.evidence-card > img { width: 56px; height: 56px; margin: 70px 0 40px; }
-.evidence-card h3 { margin: 0; font-size: 28px; }
-.evidence-card > p { position: absolute; left: 34px; bottom: 28px; color: #68717d; }
-.evidence-link { margin-top: 22px; padding-bottom: 8px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-
 .architect { padding: clamp(90px, 11vw, 170px) var(--pad); display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(40px, 8vw, 130px); color: var(--white); background: var(--ink); }
 .architect-mark { position: relative; min-height: 560px; overflow: hidden; padding: 38px; display: grid; align-content: end; color: var(--ink); background: var(--acid); }
 .architect-mark::before { content: "A"; position: absolute; right: -6%; top: -12%; color: transparent; -webkit-text-stroke: 1px var(--ink); font-family: Impact, sans-serif; font-size: 480px; line-height: 1; }
@@ -338,7 +317,6 @@ html[dir="rtl"] .architect blockquote { text-align: right; }
   .service-card { grid-template-columns: 90px 60px 1fr 1fr; }
   .service-card ul { display: none; }
   .service-card > strong { left: 168px; }
-  .evidence-grid { grid-template-columns: repeat(3,1fr); }
   .site-footer { grid-template-columns: repeat(2,1fr); }
   .footer-signature { justify-items: start; }
 }
@@ -395,9 +373,6 @@ html[dir="rtl"] .architect blockquote { text-align: right; }
   .portrait-signal { min-width: 148px; font-size: 7px; }
   .signal-a { left: 4%; top: 39%; }.signal-b { right: 3%; top: 54%; }
   .portrait-stamp { display: none; }
-  .proof-ribbon { padding-inline: 20px; }
-  .proof-ribbon > div { grid-template-columns: repeat(2,1fr); }
-  .proof-ribbon article { min-height: 100px; padding: 16px; border-bottom: 1px solid var(--line-dark); }
   .section-heading { margin-bottom: 42px; }
   .section-heading h2, .trust h2, .architect h2, .contact h2 { font-size: clamp(44px,13vw,62px); }
   .blueprint-stage { min-height: 1120px; }
@@ -422,8 +397,6 @@ html[dir="rtl"] .architect blockquote { text-align: right; }
   .sovereignty-mark span { font-size: 70px; }
   .map-label b { display: none; }
   .trust-copy { padding: 70px 20px 90px; }
-  .evidence-grid { grid-template-columns: 1fr; }
-  .evidence-card { min-height: 310px; }
   .architect-mark { min-height: 330px; }
   .brief-form { grid-template-columns: 1fr; padding: 22px; box-shadow: 10px 10px 0 var(--ink); }
   .brief-form label, .field-wide { grid-column: 1; }
