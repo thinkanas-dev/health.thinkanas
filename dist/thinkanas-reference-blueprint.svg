@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">ThinkAnas Health reference architecture blueprint</title>
+  <desc id="desc">An illustrative, synthetic reference architecture for governed pre-admission workflow orchestration.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#243247" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12Z" fill="#c9ff2f"/>
+    </marker>
+    <style>
+      .sans{font-family:Arial,Helvetica,sans-serif}.label{font-size:18px;font-weight:700;letter-spacing:3px}.small{font-size:14px;letter-spacing:2px}.title{font-size:74px;font-weight:900;letter-spacing:-3px}.node{fill:#101c2d;stroke:#607089;stroke-width:2}.node-title{fill:#fffefa;font-size:23px;font-weight:800}.node-copy{fill:#9eabbc;font-size:15px}.acid{fill:#c9ff2f}.blue{fill:#36d9ff}.muted{fill:#8f9bac}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#07101d"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity=".42"/>
+  <rect x="64" y="55" width="20" height="20" fill="#c9ff2f"/><rect x="90" y="55" width="12" height="12" transform="rotate(45 96 61)" fill="#c9ff2f"/>
+  <text x="120" y="75" class="sans label" fill="#fffefa">THINK.ANAS / HEALTH</text>
+  <text x="64" y="160" class="sans title" fill="#fffefa">GOVERNED PRE-ADMISSION</text>
+  <text x="64" y="230" class="sans title acid">REFERENCE BLUEPRINT</text>
+  <text x="64" y="278" class="sans small muted">ILLUSTRATIVE ARCHITECTURE · SYNTHETIC INFORMATION · NOT A CLIENT DEPLOYMENT</text>
+
+  <g transform="translate(64 365)">
+    <rect class="node" width="250" height="190"/>
+    <text x="24" y="40" class="sans small blue">01 / SIGNAL</text>
+    <text x="24" y="82" class="sans node-title">PATIENT ACCESS</text>
+    <text x="24" y="116" class="sans node-copy">Request + consent</text>
+    <text x="24" y="142" class="sans node-copy">Identity + context</text>
+    <rect x="24" y="160" width="82" height="4" class="acid"/>
+  </g>
+  <path d="M314 460H372" stroke="#c9ff2f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(390 365)">
+    <rect class="node" width="250" height="190"/>
+    <text x="24" y="40" class="sans small blue">02 / CONNECT</text>
+    <text x="24" y="82" class="sans node-title">FHIR EXCHANGE</text>
+    <text x="24" y="116" class="sans node-copy">Existing systems</text>
+    <text x="24" y="142" class="sans node-copy">Local pathways</text>
+    <rect x="24" y="160" width="82" height="4" class="acid"/>
+  </g>
+  <path d="M640 460H698" stroke="#c9ff2f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(716 365)">
+    <rect class="node" width="250" height="190"/>
+    <text x="24" y="40" class="sans small blue">03 / REASON</text>
+    <text x="24" y="82" class="sans node-title">SUPERVISED AI</text>
+    <text x="24" y="116" class="sans node-copy">Evidence + limits</text>
+    <text x="24" y="142" class="sans node-copy">Exception detection</text>
+    <rect x="24" y="160" width="82" height="4" class="acid"/>
+  </g>
+  <path d="M966 460H1024" stroke="#c9ff2f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(1042 365)">
+    <rect width="250" height="190" fill="#244cff" stroke="#c9ff2f" stroke-width="3"/>
+    <text x="24" y="40" class="sans small acid">04 / AUTHORISE</text>
+    <text x="24" y="82" class="sans node-title">HUMAN OWNER</text>
+    <text x="24" y="116" class="sans node-copy" fill="#d8ddff">Approve / reject</text>
+    <text x="24" y="142" class="sans node-copy" fill="#d8ddff">Escalate + record</text>
+    <rect x="24" y="160" width="82" height="4" fill="#fffefa"/>
+  </g>
+  <path d="M1292 460H1350" stroke="#c9ff2f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(1368 365)">
+    <rect class="node" width="168" height="190"/>
+    <text x="20" y="40" class="sans small blue">05 / TRACE</text>
+    <text x="20" y="82" class="sans node-title">ACTION</text>
+    <text x="20" y="116" class="sans node-copy">Observable</text>
+    <text x="20" y="142" class="sans node-copy">Reviewable</text>
+    <rect x="20" y="160" width="70" height="4" class="acid"/>
+  </g>
+
+  <g transform="translate(64 645)">
+    <rect width="472" height="210" fill="#c9ff2f"/>
+    <text x="28" y="42" class="sans small" fill="#07101d">CONTROL PLANE</text>
+    <text x="28" y="84" class="sans node-title" fill="#07101d">Identity · policy · audit</text>
+    <text x="28" y="118" class="sans node-copy" fill="#243247">Human authority remains explicit.</text>
+    <text x="28" y="146" class="sans node-copy" fill="#243247">Data boundaries are validated locally.</text>
+    <text x="28" y="174" class="sans node-copy" fill="#243247">Every state change leaves a trace.</text>
+  </g>
+  <g transform="translate(570 645)">
+    <rect width="966" height="210" fill="#101c2d" stroke="#607089" stroke-width="2"/>
+    <text x="28" y="42" class="sans small blue">MEASURE IN THE PILOT</text>
+    <text x="28" y="84" class="sans node-title">Completion time</text><text x="270" y="84" class="sans small acid">BASELINE → OBSERVE</text>
+    <text x="28" y="122" class="sans node-title">Exception rate</text><text x="270" y="122" class="sans small acid">BASELINE → OBSERVE</text>
+    <text x="520" y="84" class="sans node-title">Manual rework</text><text x="746" y="84" class="sans small acid">BASELINE → OBSERVE</text>
+    <text x="520" y="122" class="sans node-title">Clinical escalation</text><text x="746" y="122" class="sans small acid">TRACE → REVIEW</text>
+    <text x="28" y="174" class="sans small muted">NO INVENTED OUTCOME. DEFINE THE BASELINE, INSTRUMENT THE WORKFLOW, THEN DECIDE.</text>
+  </g>
+  <text x="64" y="940" class="sans small muted">THINKANAS HEALTH · ONE HEALTH ECOSYSTEM · CONNECTED INTELLIGENCE</text>
+  <text x="1536" y="940" text-anchor="end" class="sans small acid">STAY HUMAN. THINK FURTHER.</text>
+</svg>

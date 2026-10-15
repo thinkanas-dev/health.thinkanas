@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thinkanas-health.blahlou2026.chatgpt.site/sitemap.xml
+Sitemap: https://healththinkanas.vercel.app/sitemap.xml

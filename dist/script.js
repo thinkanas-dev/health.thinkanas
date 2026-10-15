@@ -18,10 +18,14 @@ const originalPlaceholders = new Map();
 document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => originalPlaceholders.set(element, element.getAttribute('placeholder')));
 
 const ar = {
-  skip: 'الانتقال إلى المحتوى', menu: 'فتح القائمة', navBlueprint: 'المخطط', navServices: 'الخدمات', navEcosystem: 'المنظومة', navTrust: 'الثقة في الخليج', navCta: 'ابدأ مهمة',
+  skip: 'الانتقال إلى المحتوى', menu: 'فتح القائمة', navTwin: 'التوأم الذكي', navBlueprint: 'المخطط', navServices: 'الخدمات', navCase: 'مختبر الحالة', navEcosystem: 'سياق الخليج', navTrust: 'الثقة في الخليج', navCta: 'ابدأ مهمة',
   heroEyebrow: 'أنظمة الصحة الخليجية / هندسة الذكاء الاصطناعي', heroLine1: 'منظومة صحية', heroLine2: 'واحدة.', heroLine3: 'ذكاء', heroLine4: 'مترابط.',
-  heroLede: 'أصمم طبقة ذكاء محكومة تربط بين فرقكم والأنظمة السريرية والعمليات، من دون استبدال ما يعمل بالفعل.', heroPrimary: 'استكشف الهندسة', heroSecondary: 'حدّد تجربة خلال 90 يوماً',
+  heroLede: 'أصمم طبقة ذكاء محكومة تربط بين فرقكم والأنظمة السريرية والعمليات، من دون استبدال ما يعمل بالفعل.', heroPrimary: 'شغّل التوأم الذكي', heroSecondary: 'حدّد تجربة خلال 90 يوماً',
   assurance1: 'التشغيل البيني أولاً', assurance2: 'ذكاء اصطناعي بإشراف بشري', assurance3: 'سيادة منذ التصميم', heroRole: 'مهندس رئيسي للأنظمة الصحية', signalA: 'إشراف بشري', signalB: 'تحكم محلي', signalC: 'بيانات مترابطة',
+  twinCode: 'نظام مرجعي حي', twinTitle: 'تتبّع قراراً صحياً', twinTitleEm: 'محكوماً واحداً.', twinIntro: 'اختر الولاية ومسار العمل، ثم تابع كيف تتحول المعلومات إلى إجراء قابل للمراجعة من دون التخلي عن السلطة البشرية.', twinEvidence: 'مرجع تفاعلي · بيانات تركيبية · بلا ادعاء عميل',
+  twinJourneyLabel: 'مسار العمل المرجعي', twinJourneyAccess: 'وصول المرضى وما قبل القبول', twinJourneyDischarge: 'تنسيق الخروج', twinJourneyDiagnostics: 'متابعة التشخيص',
+  twinScene1Title: 'حدث تشغيلي حقيقي يدخل النظام.', twinScene1Copy: 'ينتقل السياق والإذن مع الطلب. لا مطالبة منفصلة ولا تسليم غير مرئي.', twinScene2Title: 'طبقة التبادل تحل ما يحتاجه سير العمل.', twinScene2Copy: 'تحدد المعايير والمسارات المحلية عقد البيانات قبل استدعاء الذكاء.', twinScene3Title: 'يُعد الذكاء إجراءً، لا إجابة يتعذر تتبعها.', twinScene3Copy: 'تبقى الأدلة والثقة وشروط الاستثناء مرتبطة بالتوصية.', twinScene4Title: 'يتخذ الشخص المسؤول القرار.', twinScene4Copy: 'تصبح الموافقة والرفض والتصعيد أحداثاً قابلة للرصد والتدقيق والتحسين.',
+  twinJurisdiction: 'الولاية', twinExchange: 'سياق التبادل', twinNode1: 'السياق + الموافقة', twinNode2: 'الهوية + البيانات', twinNode3: 'الأدلة + الحدود', twinNode4: 'اعتماد / تصعيد', twinBoundary: 'حدود البيانات', twinAuthority: 'سلطة القرار', twinTrace: 'الأثر', twinOfficialContext: 'افتح السياق الرسمي', twinNotDeployment: 'هندسة مرجعية · ليست ادعاء نشر',
   blueprintCode: 'مخطط THINKANAS', blueprintTitle: 'ثمانية مجالات للرعاية.', blueprintTitleEm: 'ثلاثة محركات للذكاء.', blueprintIntro: 'هندسة قرار تربط سير العمل والبيانات والمساءلة. اختر مجالاً ثم بدّل المحرك لترى كيف يتغير نموذج التشغيل.', activeArchitecture: 'الهندسة النشطة', methodBadge: 'منهجية / وليست ادعاءً بمنتج',
   story1Title: 'افهم النظام<br />قبل اختيار <em>الذكاء الاصطناعي.</em>', story1Copy: 'نرسم خريطة القرارات والمخاطر السريرية وحدود البيانات والاحتكاك التشغيلي قبل تحديد التقنية.',
   story2Title: 'حرّك الذكاء<br />داخل <em>سير العمل الحقيقي.</em>', story2Copy: 'نربط الوكلاء والواجهات بالأنظمة القائمة عبر المعايير والصلاحيات ونقاط التسليم القابلة للمراقبة.',
@@ -32,6 +36,7 @@ const ar = {
   service3Title: 'حلول ذكاء مخصصة', service3Copy: 'وحدات قابلة لإعادة الاستخدام لمعالجة نقاط الاحتكاك الصحي مع تغيير تشغيلي قابل للقياس.', service3A: 'أتمتة وصول المرضى', service3B: 'ذكاء المستندات', service3C: 'مساعدو العمليات', service3Outcome: 'المخرج / وحدة قابلة للنشر',
   service4Title: 'عمليات الذكاء المُدارة', service4Copy: 'إبقاء الأداء والضوابط والمساءلة السريرية قابلة للمراقبة بعد الإطلاق.', service4A: 'مراقبة الجودة', service4B: 'الأمن وأدلة التدقيق', service4C: 'إيقاع الإشراف السريري', service4Outcome: 'المخرج / منصة تحكم',
   pilotTag: 'مسار تجربة 90 يوماً', pilotTitle: 'من قرار واحد إلى دليل محكوم واحد.', pilotCopy: 'المدة نموذج عمل ويتم تأكيدها بعد مرحلة الاكتشاف.', phase1: 'التأطير', phase1Copy: 'المسؤولون والنتيجة والقيود', phase2: 'التصميم', phase2Copy: 'الهندسة والضوابط والواجهات', phase3: 'التجربة', phase3Copy: 'البناء والاختبار والتحقق', phase4: 'القرار', phase4Copy: 'الأدلة والتسليم وخطة التوسع',
+  caseCode: 'مختبر الحالة المرجعية', caseTitle: 'يجب أن يكون الدليل', caseTitleEm: 'قابلاً للفحص.', caseIntro: 'مثال هندسي عملي لما قبل القبول متعدد المواقع. يوضح المنهج بمعلومات تركيبية ولا يدعي عميلاً أو نشراً أو أداءً.', caseMissionLabel: 'مهمة مرجعية / تركيبية', caseMission: 'تقليل الاحتكاك القابل للتجنب قبل القبول عبر ثلاثة مستشفيات.', caseMissionCopy: 'تُبقي الهندسة الاستثناءات واضحة، وتعيد استخدام الأنظمة القائمة، وتمنح كل إجراء جوهري مسؤولاً محدداً.', caseBefore: 'قبل', caseBeforeSmall: 'تسليمات مجزأة', caseAfter: 'الحالة المستهدفة', caseAfterSmall: 'تدفق محكوم', caseLanePatient: 'وصول المرضى', caseLaneCore: 'السجل / الأنظمة الأساسية', caseLaneExchange: 'طبقة تبادل FHIR', caseLaneAi: 'ذكاء بإشراف', caseLaneOwner: 'المسؤول البشري', caseStatusNote: 'بدّل الحالة لفحص الهندسة المستهدفة.', caseMeasuresLabel: 'قِس في التجربة — لا تدّع مسبقاً', caseMeasure1: 'زمن الإكمال', caseMeasure2: 'معدل الاستثناء', caseMeasure3: 'إعادة العمل اليدوي', caseMeasure4: 'التصعيد السريري', caseDownload: 'نزّل المخطط المرجعي',
   ecosystemCode: 'المعايير والسياق الإقليمي', ecosystemTitle: 'افهم المعايير.', ecosystemTitleEm: 'واحترم الولاية التنظيمية.', ecosystemIntro: 'طبقة مرجعية عملية للمعايير والأنظمة الصحية العامة والاستراتيجيات الوطنية التي تشكّل أعمال التشغيل البيني في الخليج.',
   ecoGlobal: 'معيار عالمي', ecoHl7Label: 'مرجع التشغيل البيني', ecoHl7Copy: 'نبني تبادل البيانات وفق مواصفات HL7 وFHIR المناسبة، لا داخل جزيرة بيانات مغلقة.', ecoSource: 'المصدر الرسمي',
   ecoKsa: 'المملكة العربية السعودية', ecoKsaLabel: 'سياق التبادل الوطني', ecoKsaCopy: 'تتطلب مسارات الأهلية والمطالبات وتبادل المعلومات الصحية هندسة واعية بمتطلبات NPHIES وتحققاً محلياً.',
@@ -39,9 +44,9 @@ const ar = {
   ecoQatar: 'دولة قطر', ecoQatarLabel: 'الاستراتيجية الوطنية للصحة', ecoQatarCopy: 'مواءمة هندسة الصحة الرقمية مع أولويات قطر لنظام صحي رقمي قائم على البيانات.', ecoDisclaimerLabel: 'مرجع، وليس اعتماداً.', ecoDisclaimer: 'تُستخدم الأسماء والعلامات لتعريف المعايير والأنظمة والولايات ذات الصلة، ولا تعني شراكة أو شهادة أو موافقة. HL7 وFHIR علامتان مسجلتان لـ Health Level Seven International، ولا يُستخدم ملف شعار HL7 الرسمي إلا بعد الحصول على الإذن المطلوب.',
   mapKsa: 'NPHIES / قرار محلي', mapUae: 'ملَفّي / نابض', mapQat: 'الاستراتيجية 2024—2030', trustCode: 'هندسة الثقة في الخليج', trustTitle: 'محلي بقرار.', trustTitleEm: 'ومسؤول منذ التصميم.', trustIntro: 'يبدأ كل تعاون بالتحقق من الولاية القضائية والاستضافة والهوية والمساءلة السريرية ومتطلبات التكامل مع المسؤولين القانونيين والأمنيين لدى العميل.',
   trust1Title: 'حدود البيانات أولاً', trust1Copy: 'نحدد أين يمكن تخزين المعلومات ومعالجتها ومراقبتها قبل اختيار الخدمات.', trust2Title: 'تبادل قائم على المعايير', trust2Copy: 'نستخدم HL7/FHIR ومسارات التبادل المحلية حيثما ينطبق ذلك تقنياً وتعاقدياً.', trust3Title: 'سلطة سريرية بشرية', trust3Copy: 'تبقى القرارات الجوهرية قابلة للمراجعة والتتبع وتحت مسؤولية أشخاص مخولين.', claimLabel: 'معيار الادعاء', claimCopy: 'بيانات القدرة الهندسية ليست شهادات أو موافقات أو ادعاءات شراكة تكامل. يتم التحقق من المتطلبات المناسبة لكل مهمة.',
-  architectCode: 'المهندس المسؤول', architectTitle: 'مسؤول واحد واضح.', architectTitleEm: 'من مجلس الإدارة إلى البناء.', architectCopy: 'ThinkAnas Health ممارسة مستقلة يقودها المؤسس. يجمع أنس السنهاجي بين تعلم أنظمة الصحة والنمذجة العملية والهندسة التنفيذية ليبقى التخطيط متصلاً بالتنفيذ.', quote: '«لا قيمة للتقنية إلا عندما تجعل الرعاية أكثر أماناً والعمل أوضح والثقة أقوى.»', architectRole: 'مهندس رئيسي للصحة ومتكامل أنظمة مستقل',
+  architectCode: 'المهندس المسؤول', architectTitle: 'مسؤول واحد واضح.', architectTitleEm: 'من مجلس الإدارة إلى البناء.', architectCopy: 'ThinkAnas Health ممارسة مستقلة يقودها المؤسس. يجمع أنس السنهاجي بين تعلم أنظمة الصحة والنمذجة العملية والهندسة التنفيذية ليبقى التخطيط متصلاً بالتنفيذ.', quote: '«لا قيمة للتقنية إلا عندما تجعل الرعاية أكثر أماناً والعمل أوضح والثقة أقوى.»', architectRole: 'مهندس رئيسي للصحة ومتكامل أنظمة مستقل', founderDirect: 'بقيادة المؤسس · تنفيذ مباشر', architectProfile: 'تحقق من الملف العام ↗',
   contactCode: 'ابدأ بمهمة واحدة', contactTitle: 'ما المشكلة التالية التي ينبغي لنظامكم الصحي', contactTitleEm: 'حلها؟', contactIntro: 'أنشئ موجزاً تنفيذياً واضحاً، واحتفظ به على جهازك، ثم تابع المحادثة مباشرة مع أنس.', privacyChip: 'لا يتم رفع بيانات النموذج أو تخزينها على هذا الموقع.',
-  formOrg: 'الجهة', formPriority: 'الأولوية', formTimeline: 'أفق القرار', formMission: 'المهمة في جملة واحدة', selectOne: 'اختر', orgHospital: 'مستشفى / نظام صحي', orgGovernment: 'حكومة / صحة عامة', orgPayer: 'جهة دفع / تأمين', orgPartner: 'شريك تقنيات صحية', priorityStrategy: 'استراتيجية وجاهزية الذكاء الاصطناعي', priorityWorkflow: 'أتمتة سير العمل السريري', priorityData: 'التشغيل البيني والبيانات', priorityGovernance: 'الحوكمة والعمليات المُدارة', timeline1: 'اكتشاف فوري', timeline2: 'خلال 90 يوماً', timeline3: 'هذا العام', timeline4: 'استكشافي', missionPlaceholder: 'مثال: تقليل صعوبات ما قبل القبول في ثلاثة مستشفيات...', formSubmit: 'إعداد الموجز التنفيذي', copyBrief: 'نسخ الموجز', shareBrief: 'مشاركة / بريد', continueLinkedin: 'المتابعة عبر LinkedIn', privacy: 'الخصوصية', legal: 'القانون والادعاءات'
+  formOrg: 'الجهة', formPriority: 'الأولوية', formTimeline: 'أفق القرار', formMission: 'المهمة في جملة واحدة', selectOne: 'اختر', orgHospital: 'مستشفى / نظام صحي', orgGovernment: 'حكومة / صحة عامة', orgPayer: 'جهة دفع / تأمين', orgPartner: 'شريك تقنيات صحية', priorityStrategy: 'استراتيجية وجاهزية الذكاء الاصطناعي', priorityWorkflow: 'أتمتة سير العمل السريري', priorityData: 'التشغيل البيني والبيانات', priorityGovernance: 'الحوكمة والعمليات المُدارة', timeline1: 'اكتشاف فوري', timeline2: 'خلال 90 يوماً', timeline3: 'هذا العام', timeline4: 'استكشافي', missionPlaceholder: 'مثال: تقليل صعوبات ما قبل القبول في ثلاثة مستشفيات...', formSubmit: 'إعداد الموجز التنفيذي', copyBrief: 'نسخ الموجز', downloadBrief: 'تنزيل الموجز', shareBrief: 'مشاركة الموجز', continueLinkedin: 'المتابعة عبر LinkedIn', privacy: 'الخصوصية', legal: 'القانون والادعاءات'
 };
 
 const blueprintData = {
@@ -62,17 +67,148 @@ const blueprintData = {
   ]
 };
 
+const twinData = {
+  regions: {
+    ksa: {
+      country: { en: 'SAUDI ARABIA', ar: 'المملكة العربية السعودية' },
+      exchange: { en: 'NPHIES-AWARE', ar: 'متوافق مع سياق NPHIES' },
+      boundary: { en: 'VALIDATE LOCAL HOSTING + PROCESSING', ar: 'تحقق من الاستضافة والمعالجة المحلية' },
+      authority: { en: 'AUTHORISED CARE / OPERATIONS OWNER', ar: 'مسؤول رعاية / عمليات مخوّل' },
+      flag: './regional-marks/flag-saudi-arabia.svg', source: 'https://www.nphies.sa/about'
+    },
+    uae: {
+      country: { en: 'UNITED ARAB EMIRATES', ar: 'الإمارات العربية المتحدة' },
+      exchange: { en: 'MALAFFI / NABIDH CONTEXT', ar: 'سياق ملفّي / نابض' },
+      boundary: { en: 'VALIDATE EMIRATE + HOSTING PATH', ar: 'تحقق من الإمارة ومسار الاستضافة' },
+      authority: { en: 'AUTHORISED PROVIDER / OPERATIONS OWNER', ar: 'مسؤول منشأة / عمليات مخوّل' },
+      flag: './regional-marks/flag-uae.svg', source: 'https://nabidh.dha.gov.ae/about'
+    },
+    qatar: {
+      country: { en: 'STATE OF QATAR', ar: 'دولة قطر' },
+      exchange: { en: 'NHS 2024—2030 CONTEXT', ar: 'سياق الاستراتيجية 2024—2030' },
+      boundary: { en: 'VALIDATE NATIONAL DATA REQUIREMENTS', ar: 'تحقق من متطلبات البيانات الوطنية' },
+      authority: { en: 'AUTHORISED CLINICAL / PROGRAMME OWNER', ar: 'مسؤول سريري / برنامج مخوّل' },
+      flag: './regional-marks/flag-qatar.svg', source: 'https://www.moph.gov.qa/english/NHS/Documents/NHS_2024_2030_EN.pdf'
+    }
+  },
+  journeys: {
+    access: {
+      labels: {
+        en: ['PATIENT REQUEST', 'FHIR CONTEXT', 'AI DRAFT', 'HUMAN DECISION'],
+        ar: ['طلب المريض', 'سياق FHIR', 'مسودة الذكاء', 'قرار بشري']
+      }
+    },
+    discharge: {
+      labels: {
+        en: ['DISCHARGE SIGNAL', 'CARE CONTEXT', 'COORDINATION PLAN', 'TEAM AUTHORISATION'],
+        ar: ['إشارة الخروج', 'سياق الرعاية', 'خطة التنسيق', 'اعتماد الفريق']
+      }
+    },
+    diagnostics: {
+      labels: {
+        en: ['RESULT EVENT', 'CLINICAL CONTEXT', 'FOLLOW-UP DRAFT', 'CLINICIAN REVIEW'],
+        ar: ['حدث النتيجة', 'السياق السريري', 'مسودة المتابعة', 'مراجعة الطبيب']
+      }
+    }
+  }
+};
+
 let language = 'en';
 let activeEngine = 0;
 let activeDomain = 0;
+let activeTwinRegion = 'ksa';
+let activeTwinJourney = 'access';
+let activeTwinPhase = 0;
+let activeCaseState = 'before';
 let currentBrief = '';
 const enginesRoot = document.querySelector('[data-engines]');
 const domainsRoot = document.querySelector('[data-domains]');
 const blueprintTitle = document.querySelector('[data-blueprint-title]');
 const blueprintCopy = document.querySelector('[data-blueprint-copy]');
 const engineNumber = document.querySelector('[data-engine-number]');
+const twinConsole = document.querySelector('[data-twin-console]');
+const twinRegionButtons = [...document.querySelectorAll('[data-twin-region]')];
+const twinJourneySelect = document.querySelector('[data-twin-journey]');
+const twinScenes = [...document.querySelectorAll('[data-twin-scene]')];
+const twinNodes = [...document.querySelectorAll('[data-twin-node]')];
+const caseDiagram = document.querySelector('[data-case-diagram]');
+const caseButtons = [...document.querySelectorAll('[data-case-state]')];
+const caseStatus = document.querySelector('[data-case-status]');
 
 const getLocaleLabel = (item) => language === 'ar' ? item.ar : item.en;
+
+function renderTwin() {
+  if (!twinConsole) return;
+  const region = twinData.regions[activeTwinRegion];
+  const journey = twinData.journeys[activeTwinJourney];
+  const locale = language === 'ar' ? 'ar' : 'en';
+  twinRegionButtons.forEach((button) => {
+    const selected = button.dataset.twinRegion === activeTwinRegion;
+    button.classList.toggle('is-active', selected);
+    button.setAttribute('aria-selected', String(selected));
+  });
+  twinNodes.forEach((node, index) => {
+    node.classList.toggle('is-active', index <= activeTwinPhase);
+    node.classList.toggle('is-current', index === activeTwinPhase);
+    node.setAttribute('aria-pressed', String(index === activeTwinPhase));
+  });
+  twinScenes.forEach((scene, index) => scene.classList.toggle('is-active', index === activeTwinPhase));
+  document.querySelector('[data-twin-country]').textContent = region.country[locale];
+  document.querySelector('[data-twin-exchange]').textContent = region.exchange[locale];
+  document.querySelector('[data-twin-boundary]').textContent = region.boundary[locale];
+  document.querySelector('[data-twin-authority]').textContent = region.authority[locale];
+  const flag = document.querySelector('[data-twin-flag]');
+  flag.src = region.flag;
+  flag.alt = region.country[locale];
+  const source = document.querySelector('[data-twin-source]');
+  source.href = region.source;
+  document.querySelector('[data-twin-mode]').textContent = `${language === 'ar' ? 'محاكاة' : 'SIMULATION'} ${String(activeTwinPhase + 1).padStart(2, '0')}`;
+  document.querySelectorAll('[data-twin-label]').forEach((label, index) => { label.textContent = journey.labels[locale][index]; });
+  twinConsole.dataset.phase = String(activeTwinPhase);
+  twinConsole.classList.remove('is-refreshing');
+  void twinConsole.offsetWidth;
+  twinConsole.classList.add('is-refreshing');
+}
+
+function renderCase() {
+  if (!caseDiagram) return;
+  caseDiagram.dataset.caseDiagram = activeCaseState;
+  caseButtons.forEach((button) => {
+    const selected = button.dataset.caseState === activeCaseState;
+    button.classList.toggle('is-active', selected);
+    button.setAttribute('aria-selected', String(selected));
+  });
+  if (caseStatus) caseStatus.textContent = activeCaseState === 'before'
+    ? (language === 'ar' ? 'مجزأ / غير مرصود' : 'FRAGMENTED / UNOBSERVED')
+    : (language === 'ar' ? 'مترابط / محكوم / قابل للتتبع' : 'CONNECTED / GOVERNED / TRACEABLE');
+}
+
+twinRegionButtons.forEach((button) => button.addEventListener('click', () => {
+  activeTwinRegion = button.dataset.twinRegion;
+  renderTwin();
+}));
+twinJourneySelect?.addEventListener('change', () => {
+  activeTwinJourney = twinJourneySelect.value;
+  activeTwinPhase = 0;
+  renderTwin();
+});
+[...twinScenes, ...twinNodes].forEach((element) => {
+  const activate = () => {
+    activeTwinPhase = Number(element.dataset.twinScene ?? element.dataset.twinNode);
+    renderTwin();
+  };
+  element.addEventListener('click', activate);
+  element.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      activate();
+    }
+  });
+});
+caseButtons.forEach((button) => button.addEventListener('click', () => {
+  activeCaseState = button.dataset.caseState;
+  renderCase();
+}));
 
 function describeBlueprint() {
   const engine = blueprintData.engines[activeEngine];
@@ -166,6 +302,8 @@ function setLanguage(nextLanguage, updateUrl = true) {
     history.replaceState({}, '', url);
   }
   renderBlueprint();
+  renderTwin();
+  renderCase();
 }
 
 document.querySelector('[data-language-toggle]')?.addEventListener('click', () => setLanguage(language === 'en' ? 'ar' : 'en'));
@@ -219,6 +357,16 @@ if ('IntersectionObserver' in window && !reduceMotion.matches) {
   document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
 }
 
+if ('IntersectionObserver' in window && !reduceMotion.matches && twinScenes.length) {
+  const twinObserver = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    activeTwinPhase = Number(visible.target.dataset.twinScene);
+    renderTwin();
+  }, { threshold: [.35, .6], rootMargin: '-18% 0px -35% 0px' });
+  twinScenes.forEach((scene) => twinObserver.observe(scene));
+}
+
 const form = document.querySelector('[data-brief-form]');
 const output = document.querySelector('[data-brief-output]');
 const briefActions = document.querySelector('[data-brief-actions]');
@@ -263,15 +411,30 @@ document.querySelector('[data-copy-brief]')?.addEventListener('click', async () 
   }
 });
 
+document.querySelector('[data-download-brief]')?.addEventListener('click', () => {
+  if (!currentBrief) return;
+  const blob = new Blob([currentBrief], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = language === 'ar' ? 'thinkanas-health-mission-brief-ar.txt' : 'thinkanas-health-mission-brief.txt';
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  showToast(language === 'ar' ? 'تم تنزيل الموجز' : 'Brief downloaded');
+});
+
 document.querySelector('[data-share-brief]')?.addEventListener('click', async () => {
   if (!currentBrief) return;
   if (navigator.share) {
     try { await navigator.share({ title: 'ThinkAnas Health — Executive Mission Brief', text: currentBrief }); }
     catch (error) { if (error.name !== 'AbortError') showToast(language === 'ar' ? 'تعذر فتح المشاركة' : 'Sharing is unavailable'); }
-  } else {
-    const subject = encodeURIComponent('ThinkAnas Health — Executive Mission Brief');
-    const body = encodeURIComponent(currentBrief);
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+  } else try {
+    await navigator.clipboard.writeText(currentBrief);
+    showToast(language === 'ar' ? 'تم نسخ الموجز — شاركه عبر القناة التي تختارها' : 'Brief copied — share it through your preferred channel');
+  } catch {
+    showToast(language === 'ar' ? 'المشاركة غير متاحة — استخدم زر التنزيل' : 'Sharing unavailable — use Download brief');
   }
 });
 
