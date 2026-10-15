@@ -249,16 +249,10 @@ html[dir="rtl"] .scroll-meter span { transform-origin: right; }
 .claim-note span { color: #c4ccff; font-size: 10px; line-height: 1.5; }
 
 .proof { color: var(--ink); background: var(--paper); }
-.evidence-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
-.evidence-feature, .evidence-card { position: relative; min-height: 470px; padding: clamp(24px, 3.2vw, 44px); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.evidence-feature { color: var(--white); background: var(--ink); }
-.evidence-type, .evidence-card > p { font-size: 8px; font-weight: 900; letter-spacing: .13em; }
-.evidence-feature h3, .evidence-card h3 { font-family: Georgia, serif; font-weight: 400; font-style: italic; line-height: 1.04; }
-.evidence-feature h3 { max-width: 580px; margin: 50px 0 24px; font-size: clamp(38px, 4vw, 66px); }
-.evidence-feature > p { color: #a7b1bf; line-height: 1.62; }
-.evidence-feature ul { margin: 35px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
-.evidence-feature li { padding: 9px 11px; color: var(--ink); background: var(--acid); font-size: 9px; font-weight: 800; }
-.evidence-feature small { position: absolute; left: 42px; right: 42px; bottom: 28px; color: #6f7d8f; font-size: 9px; line-height: 1.4; }
+.evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.evidence-card { position: relative; min-height: 470px; padding: clamp(24px, 3.2vw, 44px); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.evidence-card > p { font-size: 8px; font-weight: 900; letter-spacing: .13em; }
+.evidence-card h3 { font-family: Georgia, serif; font-weight: 400; font-style: italic; line-height: 1.04; }
 .evidence-card > span { color: var(--blue); font-family: Georgia, serif; font-size: 32px; font-style: italic; }
 .evidence-card > img { width: 56px; height: 56px; margin: 70px 0 40px; }
 .evidence-card h3 { margin: 0; font-size: 28px; }
@@ -345,7 +339,6 @@ html[dir="rtl"] .architect blockquote { text-align: right; }
   .service-card ul { display: none; }
   .service-card > strong { left: 168px; }
   .evidence-grid { grid-template-columns: repeat(3,1fr); }
-  .evidence-feature { grid-column: 1/-1; min-height: 390px; }
   .site-footer { grid-template-columns: repeat(2,1fr); }
   .footer-signature { justify-items: start; }
 }
@@ -430,7 +423,6 @@ html[dir="rtl"] .architect blockquote { text-align: right; }
   .map-label b { display: none; }
   .trust-copy { padding: 70px 20px 90px; }
   .evidence-grid { grid-template-columns: 1fr; }
-  .evidence-feature { grid-column: auto; min-height: 520px; }
   .evidence-card { min-height: 310px; }
   .architect-mark { min-height: 330px; }
   .brief-form { grid-template-columns: 1fr; padding: 22px; box-shadow: 10px 10px 0 var(--ink); }
