@@ -105,15 +105,7 @@ html[dir="rtl"] .scroll-meter span { transform-origin: right; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 html[dir="rtl"] .hero-ticker div { animation-direction: reverse; }
 
-.proof-ribbon { padding: 26px var(--pad) 32px; color: var(--ink); background: var(--lime); }
-.proof-ribbon > p { margin: 0 auto 20px; max-width: var(--max); display: flex; justify-content: space-between; font-size: 8px; font-weight: 900; letter-spacing: .18em; }
-.proof-ribbon > p a { border-bottom: 1px solid currentColor; }
-.proof-ribbon > div { max-width: var(--max); margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(7, 17, 31, .32); border-left: 1px solid rgba(7, 17, 31, .26); }
-.proof-ribbon article { min-height: 86px; padding: 18px 22px; display: grid; gap: 4px; border-right: 1px solid rgba(7, 17, 31, .26); border-bottom: 1px solid rgba(7, 17, 31, .26); }
-.proof-ribbon strong { font-size: clamp(20px, 2.3vw, 34px); line-height: 1; letter-spacing: -.04em; }
-.proof-ribbon article span { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-
-.blueprint, .services, .proof { padding: clamp(90px, 11vw, 174px) var(--pad); background: var(--paper); color: var(--ink); }
+.blueprint, .services { padding: clamp(90px, 11vw, 174px) var(--pad); background: var(--paper); color: var(--ink); }
 .section-heading { max-width: var(--max); margin: 0 auto clamp(44px, 6vw, 86px); display: grid; grid-template-columns: 1.35fr .65fr; column-gap: 8vw; align-items: end; }
 .section-heading .section-code { grid-column: 1 / -1; color: #176fad; }
 .section-code span { display: inline-grid; place-items: center; width: 26px; height: 26px; color: var(--ink); border-radius: 50%; background: var(--lime); font-size: 8px; font-weight: 900; letter-spacing: 0; }
@@ -226,22 +218,6 @@ html[dir="rtl"] .hero-ticker div { animation-direction: reverse; }
 .claim-note b { color: var(--lime); font-size: 7px; letter-spacing: .15em; }
 .claim-note span { color: #9aabba; line-height: 1.55; }
 
-.proof { background: #e9e8e2; }
-.evidence-grid { max-width: var(--max); margin: auto; display: grid; grid-template-columns: 1.3fr repeat(3, .7fr); border-top: 1px solid var(--line-light); border-left: 1px solid var(--line-light); }
-.evidence-feature, .evidence-card { min-height: 440px; padding: clamp(25px, 3vw, 42px); border-right: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); background: rgba(255, 255, 255, .22); }
-.evidence-feature { color: white; background: var(--ink-2); }
-.evidence-type { color: var(--lime); font-size: 8px; letter-spacing: .16em; }
-.evidence-feature h3 { margin: 75px 0 22px; font-size: clamp(30px, 3.6vw, 54px); line-height: .98; letter-spacing: -.045em; }
-.evidence-feature > p { max-width: 600px; color: #9fb0c0; line-height: 1.6; }
-.evidence-feature ul { padding: 0; margin: 28px 0; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
-.evidence-feature li { padding: 8px 10px; border: 1px solid rgba(61, 230, 255, .25); color: #d5e4f1; font-size: 8px; letter-spacing: .08em; }
-.evidence-feature small { display: block; color: #6f8294; font-size: 9px; line-height: 1.5; }
-.evidence-card { display: flex; flex-direction: column; }
-.evidence-card > span { color: #587087; font-size: 9px; letter-spacing: .14em; }
-.evidence-card img { width: 52px; height: 52px; margin: 68px 0 auto; object-fit: contain; }
-.evidence-card h3 { margin: 30px 0 20px; font-size: clamp(20px, 2vw, 29px); line-height: 1.08; letter-spacing: -.03em; }
-.evidence-card p { margin: 0; color: #5e6d7a; font-size: 7px; font-weight: 800; letter-spacing: .14em; }
-.evidence-link { max-width: var(--max); margin: 28px auto 0; padding: 16px 18px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 
 .architect { padding: clamp(90px, 10vw, 160px) var(--pad); display: grid; grid-template-columns: .65fr 1.35fr; gap: 9vw; color: white; background: radial-gradient(circle at 10% 40%, rgba(0, 132, 255, .15), transparent 25%), #07111f; }
 .architect-mark { align-self: stretch; min-height: 540px; padding: 40px; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(19, 48, 76, .65), rgba(4, 14, 26, .4)); clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 0 100%); }
@@ -322,9 +298,6 @@ html[dir="rtl"] .architect blockquote { padding-left: 0; padding-right: 28px; bo
   .hero h1 { font-size: clamp(56px, 7.8vw, 90px); }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .service-card { min-height: 470px; }
-  .evidence-grid { grid-template-columns: repeat(3, 1fr); }
-  .evidence-feature { grid-column: 1 / -1; min-height: 370px; }
-  .evidence-card { min-height: 340px; }
   .engagement { grid-template-columns: 1fr; }
   .engagement-lead { border-right: 0; border-bottom: 1px solid var(--line); }
   .site-footer { grid-template-columns: repeat(2, 1fr); }
@@ -383,10 +356,7 @@ html[dir="rtl"] .architect blockquote { padding-left: 0; padding-right: 28px; bo
   .signal-b { top: 32%; right: 3%; }
   .signal-c { top: 51%; left: 5%; }
   .portrait-id { left: 22px; bottom: 24px; }
-  .proof-ribbon { padding-inline: 20px; }
-  .proof-ribbon > div { grid-template-columns: repeat(2, 1fr); }
-  .proof-ribbon article { min-height: 78px; padding: 15px; }
-  .blueprint, .services, .proof, .architect, .contact { padding-inline: 20px; }
+  .blueprint, .services, .architect, .contact { padding-inline: 20px; }
   .section-heading { margin-bottom: 42px; }
   .section-heading h2, .trust h2, .architect h2, .contact h2 { font-size: clamp(39px, 13vw, 58px); }
   .blueprint-stage { min-height: 1180px; border-radius: 12px; }
@@ -410,9 +380,6 @@ html[dir="rtl"] .architect blockquote { padding-left: 0; padding-right: 28px; bo
   .map-uae { right: 8%; top: 55%; }
   .map-qat { right: 22%; top: 35%; }
   .trust-copy { padding-inline: 20px; }
-  .evidence-grid { grid-template-columns: 1fr; }
-  .evidence-feature { grid-column: auto; min-height: 500px; }
-  .evidence-card { min-height: 330px; }
   .architect { gap: 50px; }
   .architect-mark { min-height: 300px; }
   .brief-form { grid-template-columns: 1fr; padding: 22px; }
