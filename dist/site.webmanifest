@@ -1,0 +1,17 @@
+{
+  "name": "ThinkAnas Health",
+  "short_name": "ThinkAnas",
+  "description": "One Health Ecosystem. Connected Intelligence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "/brand-icons/00_monogramme_officiel.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

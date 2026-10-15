@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thinkanas-health.blahlou2026.chatgpt.site/sitemap.xml
