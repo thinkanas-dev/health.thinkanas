@@ -6,7 +6,11 @@ Static executive landing page for `health.thinkanas.com`.
 
 Serve the `dist` directory with any static HTTP server.
 
-The hero and cinematic journey use `dist/anas-dubai-vision.png`, supplied by the site owner.
+The visual system uses owner-supplied brand assets:
+
+- `dist/thinkanas-logo-official.png` — official ThinkAnas wordmark.
+- `dist/brand-icons/` — official ThinkAnas Health icon system.
+- `dist/anas-dubai-vision.png` — Dubai healthcare vision portrait and presentation artwork.
 
 ## Before public launch
 

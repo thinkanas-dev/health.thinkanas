@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Interopérabilité"><title>Interopérabilité — ThinkAnas</title><desc>Connexion SIH, API et échanges FHIR/HL7</desc><g stroke="#e2ff54" fill="none" stroke-width="3.8" stroke-linecap="square" stroke-linejoin="bevel"><path d="M9 26H32V64H9Z M64 26H87V64H64Z"/>
+ <path d="M14 34H27M14 42H27M69 34H82M69 42H82"/>
+ <path d="M32 37H64M58 31l6 6-6 6M64 54H32M38 48l-6 6 6 6"/>
+ <path d="M44 24l4-7 4 7"/></g><g fill="#9cafff"><path d="M48 59L57 68L48 77L39 68Z" fill="#9cafff" stroke="none"/></g></svg>
