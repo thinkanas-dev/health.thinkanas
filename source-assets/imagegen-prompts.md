@@ -2,6 +2,16 @@
 
 Generation mode: built-in image generation.
 
+## Founder portrait cutout
+
+- Source reference: `source-assets/anas-real-face-reference.png`
+- Generated source: `C:\Users\Administrateur\.codex\generated_images\01a13b05-a73f-7ab2-aac7-b7a97ba627e3\exec-66adef85-30ee-4ff6-bfad-563d1fdca7e5.png`
+- Website asset: `dist/anas-portrait-cutout.png`
+
+Final prompt:
+
+> Use case: background-extraction. Asset type: transparent founder portrait cutout for the ThinkAnas Health website. Image 1 is the edit target and identity reference. Isolate only Anas Senhaji, the suited man on the right side of the supplied image, as a clean transparent-background cutout. Preserve the exact real face, facial proportions, skin texture, hairstyle, eyebrows, moustache, expression, body pose, navy suit, white shirt, pocket square, and original photographic lighting. Keep the visible head, torso, shoulders, and arms; crop cleanly at the lower frame edge. Change only the background by removing it; preserve the person exactly; transparent background with clean natural hair, ear, jacket and shoulder edges; no halo; no retouching; no beautification; no face alteration; no clothing alteration; no added objects; no text; no logo; no watermark. Avoid synthetic skin, changed identity, changed expression, distorted anatomy, artificial relighting, and generated facial details.
+
 ## Health command center
 
 - Source: `C:\Users\Administrateur\.codex\generated_images\01a13b05-a73f-7ab2-aac7-b7a97ba627e3\exec-ab2683ff-d8e4-4bf0-87da-b9f3c5e69559.png`
