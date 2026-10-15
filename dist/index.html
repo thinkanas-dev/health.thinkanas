@@ -67,6 +67,7 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <a href="#blueprint" data-i18n="navBlueprint">Blueprint</a>
         <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#ecosystem" data-i18n="navEcosystem">Ecosystem</a>
         <a href="#trust" data-i18n="navTrust">GCC Trust</a>
         <a class="nav-cta" href="#contact"><span data-i18n="navCta">Start a mission</span><b>↗</b></a>
       </nav>
@@ -163,17 +164,63 @@
         </div>
       </section>
 
+      <section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="ecosystem-heading reveal">
+          <p class="section-code"><span>03</span><b data-i18n="ecosystemCode">STANDARDS & REGIONAL CONTEXT</b></p>
+          <h2 id="ecosystem-title"><span data-i18n="ecosystemTitle">Know the standards.</span><br /><em data-i18n="ecosystemTitleEm">Respect the jurisdiction.</em></h2>
+          <p data-i18n="ecosystemIntro">A practical reference layer for the standards, public health systems and national strategies that shape interoperability work across the Gulf.</p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a class="ecosystem-card ecosystem-card-standard reveal" href="https://www.hl7.org/fhir/" target="_blank" rel="noopener" aria-label="HL7 FHIR official standard">
+            <div class="ecosystem-card-top"><span data-i18n="ecoGlobal">GLOBAL STANDARD</span><b>↗</b></div>
+            <div class="standard-lockup" aria-label="HL7 FHIR R4">
+              <strong>HL7<sup>®</sup></strong>
+              <span>FHIR<sup>®</sup><i>R4</i></span>
+            </div>
+            <div class="ecosystem-card-copy"><span data-i18n="ecoHl7Label">INTEROPERABILITY REFERENCE</span><p data-i18n="ecoHl7Copy">Structure exchange around the applicable HL7 and FHIR specifications—not around a proprietary data island.</p></div>
+            <span class="source-link" data-i18n="ecoSource">OFFICIAL SOURCE</span>
+          </a>
+
+          <a class="ecosystem-card ecosystem-card-country reveal" data-delay="1" href="https://www.nphies.sa/about" target="_blank" rel="noopener" aria-label="NPHIES official website">
+            <div class="ecosystem-card-top"><span data-i18n="ecoKsa">SAUDI ARABIA</span><b>↗</b></div>
+            <div class="country-identity"><img src="./regional-marks/flag-saudi-arabia.svg" width="900" height="600" alt="Flag of Saudi Arabia" /><span>KSA</span></div>
+            <div class="system-lockup system-nphies"><strong>nphies</strong><small>National exchange services</small></div>
+            <div class="ecosystem-card-copy"><span data-i18n="ecoKsaLabel">NATIONAL EXCHANGE CONTEXT</span><p data-i18n="ecoKsaCopy">Eligibility, claims and health-information exchange pathways require NPHIES-aware architecture and local validation.</p></div>
+            <span class="source-link" data-i18n="ecoSource">OFFICIAL SOURCE</span>
+          </a>
+
+          <article class="ecosystem-card ecosystem-card-country reveal" data-delay="2">
+            <div class="ecosystem-card-top"><span data-i18n="ecoUae">UNITED ARAB EMIRATES</span><b>02</b></div>
+            <div class="country-identity"><img src="./regional-marks/flag-uae.svg" width="1200" height="600" alt="Flag of the United Arab Emirates" /><span>UAE</span></div>
+            <div class="system-duo" aria-label="Malaffi and NABIDH"><strong>MALAFFI</strong><i>×</i><strong>NABIDH</strong></div>
+            <div class="ecosystem-card-copy"><span data-i18n="ecoUaeLabel">EMIRATE-LEVEL EXCHANGE</span><p data-i18n="ecoUaeCopy">Account for Abu Dhabi’s Malaffi and Dubai’s NABIDH pathways, governance and onboarding requirements.</p></div>
+            <div class="source-links"><a href="https://www.malaffi.ae/patients/welcome-to-malaffi/" target="_blank" rel="noopener">MALAFFI ↗</a><a href="https://nabidh.dha.gov.ae/about" target="_blank" rel="noopener">NABIDH ↗</a></div>
+          </article>
+
+          <a class="ecosystem-card ecosystem-card-country reveal" data-delay="3" href="https://www.moph.gov.qa/english/NHS/Documents/NHS_2024_2030_EN.pdf" target="_blank" rel="noopener" aria-label="Qatar National Health Strategy 2024 to 2030">
+            <div class="ecosystem-card-top"><span data-i18n="ecoQatar">STATE OF QATAR</span><b>↗</b></div>
+            <div class="country-identity"><img src="./regional-marks/flag-qatar.svg" width="1400" height="550" alt="Flag of Qatar" /><span>QAT</span></div>
+            <div class="strategy-lockup"><strong>NHS</strong><span>2024<br />—2030</span></div>
+            <div class="ecosystem-card-copy"><span data-i18n="ecoQatarLabel">NATIONAL HEALTH STRATEGY</span><p data-i18n="ecoQatarCopy">Align digital-health architecture with Qatar’s priorities for a digitally enabled, data-driven health system.</p></div>
+            <span class="source-link" data-i18n="ecoSource">OFFICIAL SOURCE</span>
+          </a>
+        </div>
+
+        <p class="ecosystem-disclaimer reveal"><b data-i18n="ecoDisclaimerLabel">REFERENCE, NOT ENDORSEMENT.</b><span data-i18n="ecoDisclaimer">Names and marks identify relevant public standards, systems and jurisdictions. They do not imply partnership, certification or approval. HL7 and FHIR are registered trademarks of Health Level Seven International; an official HL7 logo asset is only used with the required permission.</span></p>
+      </section>
+
       <section class="trust" id="trust" aria-labelledby="trust-title">
         <div class="trust-map reveal">
           <div class="sovereignty-mark" aria-hidden="true"><span>LOCAL</span><strong>≠</strong><span>ISOLATED</span></div>
           <div class="territory territory-a" aria-hidden="true"></div><div class="territory territory-b" aria-hidden="true"></div><div class="territory territory-c" aria-hidden="true"></div>
           <div class="route route-a" aria-hidden="true"></div><div class="route route-b" aria-hidden="true"></div>
-          <div class="map-label map-ksa"><i></i><span>KSA</span><b data-i18n="mapKsa">LOCAL DATA DECISION</b></div>
-          <div class="map-label map-uae"><i></i><span>UAE</span><b data-i18n="mapUae">EMIRATE CONTEXT</b></div>
-          <div class="map-label map-qat"><i></i><span>QAT</span><b data-i18n="mapQat">INSTITUTIONAL CONTROLS</b></div>
+          <div class="map-label map-ksa"><img src="./regional-marks/flag-saudi-arabia.svg" alt="" /><span>KSA</span><b data-i18n="mapKsa">NPHIES / LOCAL DECISION</b></div>
+          <div class="map-label map-uae"><img src="./regional-marks/flag-uae.svg" alt="" /><span>UAE</span><b data-i18n="mapUae">MALAFFI / NABIDH</b></div>
+          <div class="map-label map-qat"><img src="./regional-marks/flag-qatar.svg" alt="" /><span>QAT</span><b data-i18n="mapQat">NHS 2024—2030</b></div>
         </div>
         <div class="trust-copy reveal">
-          <p class="section-code"><span>03</span><b data-i18n="trustCode">GCC TRUST ARCHITECTURE</b></p>
+          <p class="section-code"><span>04</span><b data-i18n="trustCode">GCC TRUST ARCHITECTURE</b></p>
           <h2 id="trust-title"><span data-i18n="trustTitle">Local by decision.</span><br /><em data-i18n="trustTitleEm">Accountable by design.</em></h2>
           <p data-i18n="trustIntro">Every engagement begins by validating jurisdiction, hosting, identity, clinical accountability and integration obligations with the client’s legal and security owners.</p>
           <div class="trust-principles">
@@ -187,11 +234,11 @@
 
       <section class="architect" aria-labelledby="architect-title">
         <div class="architect-mark reveal"><img src="./brand-icons/00_monogramme_officiel.svg" alt="" /><span>THINKANAS / HEALTH</span><b>FOUNDER-LED</b></div>
-        <div class="architect-copy reveal"><p class="section-code"><span>04</span><b data-i18n="architectCode">THE ACCOUNTABLE ARCHITECT</b></p><h2 id="architect-title"><span data-i18n="architectTitle">One accountable lead.</span><br /><em data-i18n="architectTitleEm">From boardroom to build.</em></h2><p data-i18n="architectCopy">ThinkAnas Health is a founder-led independent practice. Anas Senhaji combines health-systems learning, hands-on prototyping and executive architecture to keep strategy connected to implementation.</p><blockquote data-i18n="quote">“Technology only matters when it makes care safer, work clearer and trust stronger.”</blockquote><div class="architect-signature"><strong>ANAS SENHAJI</strong><span data-i18n="architectRole">PRINCIPAL HEALTH ARCHITECT & INDEPENDENT SYSTEMS INTEGRATOR</span></div></div>
+        <div class="architect-copy reveal"><p class="section-code"><span>05</span><b data-i18n="architectCode">THE ACCOUNTABLE ARCHITECT</b></p><h2 id="architect-title"><span data-i18n="architectTitle">One accountable lead.</span><br /><em data-i18n="architectTitleEm">From boardroom to build.</em></h2><p data-i18n="architectCopy">ThinkAnas Health is a founder-led independent practice. Anas Senhaji combines health-systems learning, hands-on prototyping and executive architecture to keep strategy connected to implementation.</p><blockquote data-i18n="quote">“Technology only matters when it makes care safer, work clearer and trust stronger.”</blockquote><div class="architect-signature"><strong>ANAS SENHAJI</strong><span data-i18n="architectRole">PRINCIPAL HEALTH ARCHITECT & INDEPENDENT SYSTEMS INTEGRATOR</span></div></div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact-intro reveal"><p class="section-code"><span>05</span><b data-i18n="contactCode">START WITH ONE MISSION</b></p><h2 id="contact-title"><span data-i18n="contactTitle">What should your health system</span> <em data-i18n="contactTitleEm">solve next?</em></h2><p data-i18n="contactIntro">Create a concise executive brief, keep it private on your device, then continue the conversation directly with Anas.</p><div class="privacy-chip"><i></i><span data-i18n="privacyChip">No form data is uploaded or stored by this website.</span></div></div>
+        <div class="contact-intro reveal"><p class="section-code"><span>06</span><b data-i18n="contactCode">START WITH ONE MISSION</b></p><h2 id="contact-title"><span data-i18n="contactTitle">What should your health system</span> <em data-i18n="contactTitleEm">solve next?</em></h2><p data-i18n="contactIntro">Create a concise executive brief, keep it private on your device, then continue the conversation directly with Anas.</p><div class="privacy-chip"><i></i><span data-i18n="privacyChip">No form data is uploaded or stored by this website.</span></div></div>
         <form class="brief-form reveal" data-brief-form>
           <label><span data-i18n="formOrg">ORGANISATION</span><select name="organisation" required><option value="" data-i18n="selectOne">Select one</option><option value="Hospital / Health system" data-i18n="orgHospital">Hospital / Health system</option><option value="Government / Public health" data-i18n="orgGovernment">Government / Public health</option><option value="Payer / Insurer" data-i18n="orgPayer">Payer / Insurer</option><option value="Health technology partner" data-i18n="orgPartner">Health technology partner</option></select></label>
           <label><span data-i18n="formPriority">PRIORITY</span><select name="priority" required><option value="" data-i18n="selectOne">Select one</option><option value="AI strategy & readiness" data-i18n="priorityStrategy">AI strategy & readiness</option><option value="Clinical workflow automation" data-i18n="priorityWorkflow">Clinical workflow automation</option><option value="Interoperability & data" data-i18n="priorityData">Interoperability & data</option><option value="Governance & managed operations" data-i18n="priorityGovernance">Governance & managed operations</option></select></label>
